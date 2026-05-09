@@ -46,5 +46,6 @@ st.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 /* PARALLAX HERO PHOTO */
 window.addEventListener('scroll',()=>{
   const p=document.querySelector('.hero-photo-img');
-  if(p)p.style.transform=`translateY(${window.scrollY*.1}px)`;
+  if(!p)return;
+  p.style.transform=window.innerWidth>960?`translateY(${window.scrollY*.1}px)`:'';
 });

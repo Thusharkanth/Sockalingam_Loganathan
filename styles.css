@@ -238,8 +238,143 @@ footer span { color:var(--gold); }
 .reveal-left.visible { opacity:1;transform:translateX(0); }
 
 /* RESPONSIVE */
-@media(max-width:960px){.hero-photo-wrap{display:none;}.about-grid,.training-wrap{grid-template-columns:1fr;gap:40px;}.expertise-grid{grid-template-columns:1fr 1fr;}.achievements-grid{grid-template-columns:1fr;}.cert-grid{grid-template-columns:1fr 1fr;}.nav-links{display:none;}.photo-panel-3{grid-template-columns:1fr 1fr;}}
-@media(max-width:600px){section{padding:70px 5%;}.expertise-grid,.cert-grid,.photo-panel-3,.photo-panel-2{grid-template-columns:1fr;}.hero-stats{gap:22px;}}
+@media(max-width:960px){
+  nav { padding: 16px 5%; }
+  .nav-links { display:none; }
+  #hero {
+    min-height: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 42px;
+    padding: 118px 5% 76px;
+    text-align: center;
+  }
+  .hero-content { max-width: 680px; }
+  .hero-eyebrow,
+  .hero-stats,
+  .hero-cta { justify-content: center; }
+  .hero-photo-wrap {
+    display: block;
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    width: min(360px, 82vw);
+    margin: 0 auto;
+  }
+  .hero-photo-outer,
+  .hero-photo-img {
+    width: 100%;
+    height: auto;
+  }
+  .hero-photo-outer { aspect-ratio: 4 / 5; }
+  .hero-photo-img {
+    height: 100%;
+    display: block;
+  }
+  .hero-photo-overlay { pointer-events: none; }
+  .hero-photo-badge {
+    left: 50%;
+    bottom: 18px;
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: calc(100% - 28px);
+    text-align: center;
+  }
+  .about-grid,.training-wrap{grid-template-columns:1fr;gap:40px;}
+  .expertise-grid{grid-template-columns:1fr 1fr;}
+  .achievements-grid{grid-template-columns:1fr;}
+  .cert-grid{grid-template-columns:1fr 1fr;}
+  .photo-panel-3{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:600px){
+  body { cursor: auto; }
+  #cursor-dot,
+  #cursor-ring { display: none; }
+  section{padding:70px 5%;}
+  #hero {
+    padding-top: 104px;
+    gap: 34px;
+  }
+  .hero-name { font-size: clamp(2.55rem, 14vw, 3.45rem); }
+  .hero-title {
+    max-width: 24rem;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.65;
+  }
+  .hero-stats {
+    width: 100%;
+    gap: 14px;
+    justify-content: space-between;
+  }
+  .hero-stats > div {
+    min-width: 0;
+    flex: 1;
+  }
+  .stat-number { font-size: 1.9rem; }
+  .stat-label {
+    font-size: .58rem;
+    letter-spacing: .1em;
+  }
+  .hero-cta {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+  .hero-cta .btn-gold,
+  .hero-cta .btn-outline {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+  .hero-photo-wrap { width: min(310px, 84vw); }
+  .hero-photo-frame { top: -10px; right: -10px; }
+  .hero-photo-frame2 { bottom: -10px; left: -10px; }
+  .hero-photo-badge {
+    padding: 10px 14px;
+    font-size: .62rem;
+    letter-spacing: .09em;
+  }
+  .section-label {
+    gap: 10px;
+    letter-spacing: .22em;
+  }
+  .section-label span { width: 30px; }
+  .section-heading { margin-bottom: 38px; }
+  .expertise-grid,.cert-grid,.photo-panel-3,.photo-panel-2{grid-template-columns:1fr;}
+  .photos-heading-row {
+    display: block;
+  }
+  .photos-tabs {
+    margin-top: 22px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+  .photo-tab {
+    flex: 0 0 auto;
+    padding: 8px 15px;
+  }
+  .achievement-card {
+    gap: 16px;
+    padding: 24px 20px;
+  }
+  .achievement-num {
+    width: 44px;
+    font-size: 2.25rem;
+  }
+  .contact-item,
+  .contact-card {
+    align-items: flex-start;
+  }
+  .contact-item a,
+  .contact-card span {
+    overflow-wrap: anywhere;
+  }
+  #scrollTop {
+    right: 18px;
+    bottom: 18px;
+  }
+}
 
 
 /* EXPERIENCE CARDS */
