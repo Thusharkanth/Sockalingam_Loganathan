@@ -173,10 +173,14 @@ section { padding:100px 6%;position:relative; }
 .photo-thumb-cap { position:absolute;inset:0;background:linear-gradient(to top,rgba(11,31,59,.88) 0%,transparent 55%);display:flex;align-items:flex-end;padding:16px;opacity:0;transition:opacity .35s; }
 .photo-thumb:hover .photo-thumb-cap { opacity:1; }
 .photo-thumb-cap span { font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold); }
-#cert-photos { grid-template-columns:repeat(3,1fr); }
-#cert-photos .photo-thumb { aspect-ratio:3/4;background:rgba(255,255,255,.035);padding:12px;display:flex;align-items:center;justify-content:center; }
+#award-photos .photo-thumb,
+#cert-photos .photo-thumb { background:rgba(255,255,255,.035);padding:12px;display:flex;align-items:center;justify-content:center; }
+#award-photos .photo-thumb img,
 #cert-photos .photo-thumb img { object-fit:contain;filter:grayscale(10%) brightness(.94); }
+#award-photos .photo-thumb:hover img,
 #cert-photos .photo-thumb:hover img { transform:scale(1.02);filter:grayscale(0%) brightness(1); }
+#cert-photos { grid-template-columns:repeat(3,1fr); }
+#cert-photos .photo-thumb { aspect-ratio:3/4; }
 
 /* TRAINING */
 #training { background:var(--navy-mid); }
